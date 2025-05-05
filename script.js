@@ -13,6 +13,7 @@ const mele = [
   
   let pesoTotale=0;
 
+//   somma
   for (i=0; i<mele.length; i++){
       pesoTotale += mele[i].peso; 
       
@@ -26,3 +27,21 @@ let media = pesoTotale/mele.length
 
 console.log(pesoTotale);
 console.log(media)
+
+// Dividi in due array separati le mele che misurano meno o più di 15cm di diametro.
+let piccole=[];
+let grandi=[];
+
+for (i=0; i<mele.length; i++){
+    let mela= mele[i].varieta;
+    if(mele[i].diametro < 15){
+        piccole.push(mela);
+    }else{
+        grandi.push(mela);
+    }
+       
+
+}
+
+console.log(piccole)
+console.log(grandi)
